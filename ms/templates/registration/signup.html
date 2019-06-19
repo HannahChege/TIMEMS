@@ -1,0 +1,36 @@
+{%extends 'registration/base.html' %}
+{% load static %}
+
+
+{% block styles%}
+{{block.super}}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+{% endblock %}
+{% block content %}
+
+<div class="well">
+  <h1 class="insta">Time MS</h1>
+  <form method="post">
+    {% csrf_token %}
+      {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="display: none">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+      {% endfor %}
+    <center>
+    <button class="btn btn-info btn-md" type="submit">Sign up</button>
+    <p class="forgot">Have an account? <a href="/accounts/login/">Log in</a></p>
+    </div>
+    </center>
+  </form>
+  </div>
+    
+  
+{% endblock %}
