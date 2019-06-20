@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}}
+<div class="container-fluid">
+  <div class="row">
+    {% for schedule in schedules %}
+    <div class="col-md-4">
+
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+  <div class="card-header bg-transparent border-success">{{schedule.name}}</div>
+  <div class="card-body text-success">
+    <p class="card-text">{{schedule.content}}</p>
+  </div>
+  <div class="card-footer bg-transparent border-success">By:{{schedule.user.username}}</div>
+</div>
+</div>
+
+  {% endfor %}
+  </div>
+
+</div>
+{% endblock %}
