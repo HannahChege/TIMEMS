@@ -1,23 +1,33 @@
-{%extends 'base.html'%}
+{% extends 'base.html'%}
+{% load bootstrap4 %}
+{% load static%}
 
 {% block content %}
-{{block.super}}
-<div class="container-fluid">
-  <div class="row">
-    {% for schedule in schedules %}
-    <div class="col-md-4">
+<div class="container">
+        <div class="row" style="padding-top: 20px">
+            {%for schedule in schedules %}
+            <div class="col-md-4" style="margin-bottom:10px;">
+                <div class="card">
+                    
+                    <div class="card">
+                        <p>DAY</p>
+                    </div>
+                    <div class="card-body">
+                            <p>{{schedule.day}}</p>
+                         <p>TIME:{{schedule.time}}</p> 
 
-    <div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-transparent border-success">{{schedule.name}}</div>
-  <div class="card-body text-success">
-    <p class="card-text">{{schedule.content}}</p>
-  </div>
-  <div class="card-footer bg-transparent border-success">By:{{schedule.user.username}}</div>
-</div>
-</div>
+                    </div>
+                </div>
+            </div>           
+            {%endfor%}
+                    
+    </div>
+    </div>
+    
+    {%endblock%}
 
-  {% endfor %}
-  </div>
 
-</div>
-{% endblock %}
+
+
+
+

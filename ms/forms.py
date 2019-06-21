@@ -13,8 +13,8 @@ class UserRegisterForm(UserCreationForm):
 
 class NewScheduleForm(forms.ModelForm):
     class Meta:
-        model = Project
-        exclude = ['schedule', 'pub_date','profile','user']
+        model = Schedule
+        exclude = ['posted_time', 'pub_date']
         widgets = {
             'likes': forms.CheckboxSelectMultiple(),
     }

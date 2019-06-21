@@ -1,7 +1,7 @@
 {%extends "registration/base.html"%}
 {% load bootstrap4 %}
 {% block content %}
-<div class="container">
+<div class="card card ">
   <div class="row">
     <!-- Empty div -->
     <div class="col-md-4"></div>
@@ -23,13 +23,13 @@
             <div class="form-group">
               <input type="submit" class="btn btn-primary btn-sm" value="Login">
             </div>
-            <p>Not registered yet? Create an account <a href="/signup">here</a></p>
+
             <input type="hidden" name="next" value="{{next}}">
 
           </form>
 
         </div>
-
+        <a href="/accounts/register/" style="color:purple;"><button>SIGNUP</button></a> 
       </div>
 
     </div>
@@ -37,11 +37,17 @@
     <div class="col-md-4"></div>
   </div>
 </div>
-
 {% endblock %}
 <style>
-    body{
-      background-color: black;
-      background-image: url
-    }
-    </style>
+. body{
+    background: rgb(243, 243, 243);
+    font-family: 'Lato', sans-serif;
+  }
+  .btn{
+    width:60%;
+}
+.panel panel-default{
+  color:black;
+
+}
+</style>
