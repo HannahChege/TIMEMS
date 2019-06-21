@@ -1,0 +1,6 @@
+.env
+virtual/
+.vscode
+ms/__pycache__/
+timems/__pycache__/
+ms/migrations/
