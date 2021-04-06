@@ -4,7 +4,7 @@ cryptography==2.1.4
 Django==1.11.21
 django-bootstrap3==11.0.0
 django-bootstrap4==0.0.8
-django-registration==2.4.1
+django-registration==3.1.2
 enum34==1.1.6
 gyp==0.1
 idna==2.6
